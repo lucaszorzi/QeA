@@ -1,16 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q&A</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-</head>
+<%- include ('partials/header.ejs'); %>
 <body>
-    
+    <%- include ('partials/navbar.ejs'); %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                <h1>Perguntas</h1>
+            </div>
+            <div class="col-lg-2 ">
+                <a href="/perguntar" class="btn btn-dark" id="btn-pergunta">Perguntar</a>
+            </div>
+        </div>
+        <hr>
+        <% perguntas.forEach(pergunta => { %>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <a  style="color: inherit; text-decoration: none;" href="/pergunta/<%= pergunta.id %>"><h3><%= pergunta.titulo %></h3></a>
+                </div>
+
+                <div class="card-footer">
+                    <a href="/pergunta/<%= pergunta.id %>#responda"><button class="btn btn-dark">Responder</button></a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="/js/bootstrap.min.js"></script>
-</html>
+<%- include ('partials/footer.ejs'); %>
