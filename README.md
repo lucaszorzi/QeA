@@ -4,7 +4,7 @@ This project was built with Node.js, using Express, MySQL (with Sequelize) and E
 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/QeA-Platform/tree/main/public/images/system_print.png">
+  <img src="https://raw.githubusercontent.com/lucaszorzi/QeA-Platform/main/public/images/system_print.png">
 </div>
 
 
